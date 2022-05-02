@@ -1,0 +1,177 @@
+* {
+  /* border: solid 1px black; */
+  position: relative;
+  font: 600 16px/18px 'Open Sans', sans-serif;
+  letter-spacing: 0.5px;
+  color: white;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+/* 頁面配置 */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: #c8c8c8;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 500px;
+  min-height: 580px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url('https://images.unsplash.com/photo-1606660027338-3dc4335ac6e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80') center no-repeat;
+}
+
+/* 預設為隱藏 */
+
+.sign-in-form,
+.sign-up-form {
+  width: 100%;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  position: absolute;
+  transition: 0.3s linear;
+}
+
+.sign-box input#sign-in:checked+.tab+.sign-up+.tab+.login-form .sign-in-form {
+  transform: rotate(0);
+}
+
+.sign-box input#sign-up:checked+.tab+.login-form .sign-up-form {
+  transform: rotate(0);
+}
+
+/* Login form 配置 */
+
+.sign-box {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 60px 70px 100px 70px;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
+}
+
+.login-form {
+  margin-top: 15px;
+}
+
+.group {
+  padding: 10px 0px;
+}
+
+/* 字體、樣式調整 */
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]+label {
+  font-size: 23px;
+  margin-right: 10px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+input[type="radio"]:checked+label {
+  border-bottom: solid 2px #EC6340;
+  color: white;
+}
+
+label[for="username"],
+label[for="password"],
+label[for="re-password"],
+label[for="email"],
+label[for="keep"] {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.group>input[type="text"],
+input[type="password"],
+input[type="email"] {
+  display: block;
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding-left: 15px;
+  font-size: 12px;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border: none;
+  top: 3px;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: 0.2s;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #EC6340;
+}
+
+input[type="checkbox"]:checked+label {
+  color: white;
+}
+
+input[type="checkbox"]:checked:after {
+  content: '✓';
+  position: absolute;
+  left: 2px;
+  line-height: 15px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: #EC6340;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.hr {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-link {
+  width: 100%;
+  text-align: center;
+}
+
+.footer-link a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.sign-up-form {
+  display: block;
+}
+
+/* .sign-in-form,
+.sign-up-form {
+  display: none;
+}
+
+.sign-box input#sign-in:checked + .login-form .sign-in-form {
+  display: block;
+} */
+
+.group>label {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
