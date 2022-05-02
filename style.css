@@ -162,15 +162,6 @@ input[type="submit"] {
   display: block;
 }
 
-/* .sign-in-form,
-.sign-up-form {
-  display: none;
-}
-
-.sign-box input#sign-in:checked + .login-form .sign-in-form {
-  display: block;
-} */
-
 .group>label {
   -webkit-user-select: none;
   -moz-user-select: none;
